@@ -1,0 +1,152 @@
+{% extends 'AppVideos/index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<header>
+    <div id="sticky-header" class="menu-area transparent-header">
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                    <div class="menu-wrap">
+                        <nav class="menu-nav show">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static 'AppVideos/img/logo/LogoSBU.png' %}" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="{% url 'Inicio' %}">Inicio</a>
+                                    
+                                    </li>
+                                    <li ><a href="{% url 'Series' %}">Series</a>
+                                    </li>
+                                    <li><a href="{% url 'Peliculas' %}">Peliculas</a></li>
+                                    <li  class="active menu-item-has-children"><a href="{% url 'Galeria' %}">Galeria</a></li>
+                                    <li><a href="{% url 'Facebook' %}">Mirar en Facebook</a></li>
+                                    <li> <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                        <input type="hidden" name="hosted_button_id" value="ZV6SWDERNZ2PJ" />
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                        <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+                                        </form></li>
+                                </ul>
+                            </div>
+                          
+                        </nav>
+                    </div>
+
+                    <!-- Mobile Menu  -->
+                    <div class="mobile-menu">
+                        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+                        <nav class="menu-box">
+                            <div class="nav-logo"><a href="{% url 'Inicio' %}"><img src="{% static 'AppVideos/img/logo/LogoSBU.png' %}" alt="" title=""></a>
+                            </div>
+                            <div class="menu-outer">
+                                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                            </div>
+                            <div class="social-links">
+                                <ul class="clearfix">
+                                    <!-- <li><a href="#"><span class="fab fa-twitter"></span></a></li> -->
+                                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                                  <!--   <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-youtube"></span></a></li> -->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="menu-backdrop"></div>
+                    <!-- End Mobile Menu -->
+
+                    <!-- Modal Search -->
+                    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="breadcrumb-area breadcrumb-bg" data-background="{% static 'AppVideos/img/bg/PortadaSeries.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2 class="title"><span>Galeria</span></h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'Inicio' %}">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="gallery-area position-relative">
+    <div class="gallery-bg"></div>
+    <div class="container-fluid p-0 fix">
+        <div class="row gallery-active">
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/1.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/2.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/3.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/4.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/5.png' %}" alt="">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="gallery-item">
+                    <img src="{% static 'AppVideos/img/images/6.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-nav"></div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

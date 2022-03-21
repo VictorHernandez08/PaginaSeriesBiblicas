@@ -1,0 +1,551 @@
+{% extends 'AppVideos/index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<header>
+    <div id="sticky-header" class="menu-area transparent-header">
+        <div class="container custom-container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                    <div class="menu-wrap">
+                        <nav class="menu-nav show">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="{% static 'AppVideos/img/logo/LogoSBU.png' %}" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                <ul class="navigation">
+                                    <li class="menu-item-has-children"><a href="{% url 'Inicio' %}">Inicio</a>
+                                    
+                                    </li>
+                                    <li ><a href="{% url 'Series' %}">Series</a>
+                                    
+                                    </li>
+                                    <li><a href="{% url 'Peliculas' %}">Peliculas</a></li>
+                                        <li><a href="{% url 'Galeria' %}">Galeria</a></li>
+                                        <li class="active menu-item-has-children"><a href="{% url 'Facebook' %}">Mirar en Facebook</a></li>
+                                    <li> <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                        <input type="hidden" name="hosted_button_id" value="ZV6SWDERNZ2PJ" />
+                                        <input type="image" src="https://www.paypalobjects.com/en_US/MX/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                                        <img alt="" border="0" src="https://www.paypal.com/en_MX/i/scr/pixel.gif" width="1" height="1" />
+                                        </form></li>
+                                </ul>
+                            </div>
+                            
+                        </nav>
+                    </div>
+
+                    <!-- Mobile Menu  -->
+                    <div class="mobile-menu">
+                        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+                        <nav class="menu-box">
+                            <div class="nav-logo"><a href="index.html"><img src="{% static 'AppVideos/img/logo/LogoSBU.png' %}" alt="" title=""></a>
+                            </div>
+                            <div class="menu-outer">
+                                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                            </div>
+                            <div class="social-links">
+                                <ul class="clearfix">
+                                    <!-- <li><a href="#"><span class="fab fa-twitter"></span></a></li> -->
+                                    <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                                  <!--   <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-youtube"></span></a></li> -->
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="menu-backdrop"></div>
+                    <!-- End Mobile Menu -->
+
+                    <!-- Modal Search -->
+                    <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="breadcrumb-area breadcrumb-bg" data-background="{% static 'AppVideos/img/bg/PortadaSeries.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="breadcrumb-content">
+                    <h2 class="title"><span>Mirar en Facebook</span></h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'Inicio' %}">Inicio</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Mirar en Facebook</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="top-rated-movie tr-movie-bg" data-background="{% static 'AppVideos/img/bg/tr_movies_bg.jpg' %}">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="section-title text-center mb-50">
+                    <span class="sub-title">Miralas en Facebook</span>
+                    <h2 class="title">Series Biblicas Universal Tv</h2>
+                </div>
+            </div>
+        </div>
+     
+        <div class="row tr-movie-active">
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/1.png' %} " alt="">
+                        <li class="watch"><a href="https://fb.watch/bR_oHFbnzh/" target="_blank" class="btn"><i class="fas fa-play"></i>ver en Facebook</a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">REYES</h5>
+                            
+                            <span class="date">2022</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">hd</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/2.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">APOCALIPSIS</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4k</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                        <img src="{% static 'AppVideos/img/poster2/3.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">REY DAVID</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">hd</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/4.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">EL RICO Y LAZARO</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">8K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/5.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">GENESIS IMG TELEVISION</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">3D</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                        <img src="{% static 'AppVideos/img/poster2/6.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">GENESIS TVN</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">hd</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-two">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/7.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">JESUS</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/8.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">JEZABEL</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/9.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">JOSE DE EGIPTO</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/10.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">JOSUE Y LA TIERRA PROMETIDA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/11.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">LA BIBLIA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/12.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">LA BIBLIA CONTINUA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/13.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">LA REYNA ESTER</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/14.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">LEA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/15.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">LOS MILAGROS DE JESUS</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/16.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">MARIA MAGDALENA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/17.png' %}" alt="">
+                        <li class="watch"><a href="https://www.facebook.com/watch/100149999258779/666657028101368"  target="_blank" class="btn"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">MOISES Y LOS DIEZ MANDAMIENTOS</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6 grid-item grid-sizer cat-one cat-three">
+                <div class="movie-item mb-60">
+                    <div class="movie-poster">
+                       <img src="{% static 'AppVideos/img/poster2/18.png' %}" alt="">
+                        <li class="watch"><a href="https://www.youtube.com/watch?v=R2gbPxeNk2E" class="btn popup-video"><i class="fas fa-play"></i> ver en Facebook </a></li>
+                    </div>
+                    <div class="movie-content">
+                        <div class="top">
+                            <h5 class="title">SANSON Y DALILA</h5>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="bottom">
+                            <ul>
+                                <li><span class="quality">4K</span></li>
+                                <li>
+                                    <span class="duration"><i class="far fa-clock"></i> 128 min</span>
+                                    <span class="rating"><i class="fas fa-thumbs-up"></i> 3.9</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
